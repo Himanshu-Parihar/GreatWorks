@@ -28,8 +28,11 @@ jobs:
         - name: Download Aritifact
           uses: actions/download-artifact@v3
           with:
-              name: archive
+             # name: archive
               path: D:\a\GreatWorks\GreatWorks\
+        - name: Display structure of downloaded files
+          run: ls -R
+          working-directory: D:\a\GreatWorks\GreatWorks\      
    #    - name: zip content
             #      uses: thedoctor0/zip-release@main
             #      with:
