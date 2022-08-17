@@ -24,12 +24,12 @@ jobs:
           uses: actions/upload-artifact@v2
           with:
                 name: archive
-                path: .\
+                path: .\archive.zip
         - name: Download Aritifact
           uses: actions/download-artifact@v3
           with:
               name: archive
-              path: .\
+              path: .\archive.zip
    #    - name: zip content
             #      uses: thedoctor0/zip-release@main
             #      with:
