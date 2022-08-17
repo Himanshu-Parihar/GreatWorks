@@ -20,5 +20,5 @@ jobs:
           run:  pwd
         - name: list all  
           run:  ls -ah
-     #   - name: compress archive
-     #     run:        #Compress-Archive -Path C:\Github\* -DestinationPath C:\Github\archive.zip
+        - name: compress archive
+          run:  Compress-Archive -Path .\* -DestinationPath .\archive.zip
