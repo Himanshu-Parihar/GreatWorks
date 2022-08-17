@@ -28,16 +28,16 @@ jobs:
         - name: Download Aritifact
           uses: actions/download-artifact@v3
           with:
-             # name: archive
+              name: archive
               path: D:\a\GreatWorks\GreatWorks\
         - name: Display structure of downloaded files
           run: ls -R
-          working-directory: D:\a\GreatWorks\GreatWorks\      
-   #    - name: zip content
-            #      uses: thedoctor0/zip-release@main
-            #      with:
-            #        type: 'zip'
-            #        filename: release.zip
+          working-directory: D:\a\GreatWorks\GreatWorks\archive      
+        - name: zip content
+          uses: thedoctor0/zip-release@main
+          with:
+                    type: 'zip'
+                    filename: release.zip
         - name: Create Release
           id: create-new-release
           uses: actions/create-release@v1
