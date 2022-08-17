@@ -26,9 +26,10 @@ jobs:
                 name: archive
                 path: .\
         - name: Download Aritifact
-          uses: actions/download-artifact@v2
+          uses: actions/download-artifact@v3
           with:
               name: archive
+            #  path: .\
    #    - name: zip content
             #      uses: thedoctor0/zip-release@main
             #      with:
