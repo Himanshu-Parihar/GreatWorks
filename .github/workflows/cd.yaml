@@ -1,4 +1,4 @@
-name:  Harry Release CI Pipeline - Config Lib
+name:  Harry CDRelease CI Pipeline - Config Lib
 
 on:
 #  push:
