@@ -32,7 +32,7 @@ jobs:
               path: D:\a\GreatWorks\GreatWorks\
         - name: Display structure of downloaded files
           run: ls -R
-          working-directory: D:\a\GreatWorks\GreatWorks\archive      
+          working-directory: D:\a\GreatWorks\GreatWorks\      
         - name: zip content
           uses: thedoctor0/zip-release@main
           with:
