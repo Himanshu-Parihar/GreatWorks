@@ -61,7 +61,7 @@ jobs:
           with:
            repo_token: ${{ secrets.GITHUB_TOKEN }}
            file: D:\a\GreatWorks\GreatWorks\archive.zip
-           asset_name: archive
+           asset_name: archive.zip
            tag: v${{ github.run_number }}
            overwrite: true
            body: "This is my release text"
