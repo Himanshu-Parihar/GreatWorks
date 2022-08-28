@@ -3,17 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
 
-    <PackageId>AspNetMonsters.ApplicationInsights.AspNetCore</PackageId>
+    <PackageId>harry.nuget1</PackageId>
     <Version>1.0.0.0</Version>
-    <Copyright>ASP.NET Monsters 2019</Copyright>
-    <Title>Application Insights Extensions for ASP.NET Core</Title>
-    <Description>A collection of telemetry intializers to help you get the most out of Application Insights in your ASP.NET Core applications</Description>
-    <Authors>David Paquette</Authors>
+    <Copyright>Harry</Copyright>
+    <Title>Nuget package</Title>
+    <Description>test harry Package</Description>
+    <Authors>Himanshu Parihar</Authors>
     <PackageTags>AspNetCore;Application Insights;App Insights;NetCore;Telemetry</PackageTags>
-    <PackageProjectUrl>https://github.com/AspNetMonsters/ApplicationInsights</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/AspNetMonsters/ApplicationInsights/blob/master/LICENSE</PackageLicenseUrl>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/AspNetMonsters/ApplicationInsights</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Himanshu-Parihar/GreatWorks</PackageProjectUrl>
+    <PackageLicense>MIT</PackageLicense>
+    <RepositoryUrl>https://github.com/Himanshu-Parihar/GreatWorks</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
