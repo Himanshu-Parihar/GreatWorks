@@ -1,11 +1,11 @@
 name:  Harry Release CI Pipeline - Config Lib
 
 on:
-#  push:
+  push:
 #    branches: [ main ]
 #  pull_request:
 #    branches: [ main ]    
-  workflow_dispatch:
+ # workflow_dispatch:
 
   
 jobs:
@@ -21,19 +21,19 @@ jobs:
            new-item -path  ".\Demo Folder" -type directory
            Compress-Archive -Path .\* -DestinationPath .\archive.zip
 
-        - name: Upload Aritifact
-          uses: actions/upload-artifact@v2
-          with:
-                name: archive
-                path: .\archive.zip
-        - name: Download Aritifact
-          uses: actions/download-artifact@v3
-          with:
-              name: archive
-              path: D:\a\GreatWorks\GreatWorks\
-        - name: Display structure of downloaded files
-          run: ls -R
-          working-directory: D:\a\GreatWorks\GreatWorks\      
+    #    - name: Upload Aritifact
+    #      uses: actions/upload-artifact@v2
+    #      with:
+    #            name: archive
+    #            path: .\archive.zip
+    #    - name: Download Aritifact
+    #      uses: actions/download-artifact@v3
+    #      with:
+    #          name: archive
+    #          path: D:\a\GreatWorks\GreatWorks\
+    #    - name: Display structure of downloaded files
+    #      run: ls -R
+    #      working-directory: D:\a\GreatWorks\GreatWorks\      
  #       - name: zip content
  #         uses: thedoctor0/zip-release@main
  #         with:
@@ -63,6 +63,7 @@ jobs:
            repo_token: ${{ secrets.GITHUB_TOKEN }}
            file: D:\a\GreatWorks\GreatWorks\archive.zip
            asset_name: archive.zip
-           tag: v${{ github.run_number }}
+           #tag: v${{ github.run_number }}
+           tag: v${{ github.run_id }}
            overwrite: true
-           body: "This is my folder text"
+           body: "github.run_id"
