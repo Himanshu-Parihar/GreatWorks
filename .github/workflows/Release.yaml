@@ -68,7 +68,7 @@ jobs:
            asset_name: archive.zip
            #tag: v${{ github.run_number }}
            #tag: v${{ github.run_id }}
-           name: Release${{ steps.tag.outputs.release_tag }}.${{ github.run_attempt }}
+           release_name: Release${{ steps.tag.outputs.release_tag }}-${{ github.run_attempt }}
            tag: v${{ github.run_attempt }}
            overwrite: true
            body: "github.run_attempt"
