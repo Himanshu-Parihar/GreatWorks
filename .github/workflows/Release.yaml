@@ -14,8 +14,8 @@ jobs:
       runs-on: windows-latest
      # needs: build
       steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+       # - name: Checkout code
+       #   uses: actions/checkout@v2
         - name: Build project # This would actually build your project, using zip for an example artifact
           run: |
            new-item -path  ".\Demo Folder" -type directory
@@ -64,6 +64,7 @@ jobs:
            file: D:\a\GreatWorks\GreatWorks\archive.zip
            asset_name: archive.zip
            #tag: v${{ github.run_number }}
-           tag: v${{ github.run_id }}
+           #tag: v${{ github.run_id }}
+           tag: v${{ github.run_attempt }}
            overwrite: true
            body: "github.run_id"
