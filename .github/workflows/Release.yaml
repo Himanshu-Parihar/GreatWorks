@@ -60,15 +60,25 @@ jobs:
  #                   asset_path: .\
  #                   asset_name: site-v${{ github.run_number }}.zip
  #                   asset_content_type: application/zip   
+        #- name: Upload binaries to release
+          #uses: svenstaro/upload-release-action@v2
+          #with:
+           #repo_token: ${{ secrets.GITHUB_TOKEN }}
+           #file: D:\a\GreatWorks\GreatWorks\archive.zip
+           #asset_name: archive.zip
+           ##tag: v${{ github.run_number }}
+          # #tag: v${{ github.run_id }}
+         #  release_name: Release${{ steps.tag.outputs.release_tag }}-${{ github.run_attempt }}
+        #   tag: v${{ github.run_attempt }}
+       #    overwrite: true
+      #     body: "github.run_attempt"
+           
         - name: Upload binaries to release
-          uses: svenstaro/upload-release-action@v2
+          uses: qxz335w/Release1@v1 
           with:
-           repo_token: ${{ secrets.GITHUB_TOKEN }}
-           file: D:\a\GreatWorks\GreatWorks\archive.zip
-           asset_name: archive.zip
-           #tag: v${{ github.run_number }}
-           #tag: v${{ github.run_id }}
-           release_name: Release${{ steps.tag.outputs.release_tag }}-${{ github.run_attempt }}
-           tag: v${{ github.run_attempt }}
+           token: ${{ secrets.GITHUB_TOKEN }}
+           files: .\archive${{ steps.tag.outputs.release_tag }}.zip
+           name: Release${{ steps.tag.outputs.release_tag }}
+           tag_name: V${{ steps.tag.outputs.release_tag }}
            overwrite: true
-           body: "github.run_attempt"
+           body: "Build-Release-Deploy Pipeline"  
